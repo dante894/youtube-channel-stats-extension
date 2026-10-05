@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Configuración</title>
+<style>
+  body { font:15px/1.5 "Segoe UI", system-ui, sans-serif; max-width:520px; margin:40px auto; padding:0 20px; color:#1c2420; background:#f6f4ef; }
+  @media (prefers-color-scheme: dark) { body { color:#eceee9; background:#161a18; } input { background:#222925; color:inherit; } }
+  label { display:block; margin-top:18px; font-weight:600; }
+  small { display:block; font-weight:400; opacity:.7; }
+  input { width:100%; padding:9px; margin-top:6px; border:1px solid #9aa39d; border-radius:6px; font:inherit; }
+  button { margin-top:22px; padding:9px 18px; border:0; border-radius:6px; background:#1f6f4a; color:#fff; font:inherit; cursor:pointer; }
+  #ok { margin-left:12px; color:#1f6f4a; }
+</style>
+</head>
+<body>
+  <h1>Mi canal</h1>
+  <label>Tu canal
+    <small>Tu @usuario (por ejemplo @micanal) o la URL de tu canal</small>
+    <input id="channel" placeholder="@micanal">
+  </label>
+  <label>Clave de API de YouTube
+    <small>Gratis en Google Cloud Console (mira el README)</small>
+    <input id="apiKey" type="password" placeholder="AIza...">
+  </label>
+  <label>Revisar cada (minutos)
+    <small>Mínimo 5</small>
+    <input id="minutes" type="number" min="5" value="15">
+  </label>
+  <button id="save">Guardar</button><span id="ok"></span>
+  <script src="options.js"></script>
+</body>
+</html>

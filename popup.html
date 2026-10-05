@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --bg:#f6f4ef; --ink:#1c2420; --muted:#66706a; --line:#d9d6cc; --accent:#1f6f4a; --bad:#b3261e; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#161a18; --ink:#eceee9; --muted:#929b95; --line:#2b322e; --accent:#58c28d; --bad:#f2837b; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; width:320px; background:var(--bg); color:var(--ink);
+         font:14px/1.4 "Segoe UI", system-ui, sans-serif; }
+  header { display:flex; align-items:center; gap:10px; padding:14px 16px 6px; }
+  header img { width:32px; height:32px; border-radius:50%; }
+  header strong { font-size:15px; }
+  .hero { padding:6px 16px 14px; border-bottom:1px solid var(--line); }
+  .hero .n { font-size:44px; font-weight:700; letter-spacing:-1px; color:var(--accent); line-height:1.1; }
+  .hero .l { color:var(--muted); }
+  dl { margin:0; padding:6px 16px; }
+  dl div { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--line); }
+  dl div:last-child { border-bottom:0; }
+  dt { color:var(--muted); } dd { margin:0; font-weight:600; font-variant-numeric:tabular-nums; }
+  .top { padding:0 16px 10px; font-size:12px; color:var(--muted); }
+  .top a { color:var(--ink); }
+  footer { display:flex; justify-content:space-between; align-items:center; padding:10px 16px 14px; font-size:12px; color:var(--muted); }
+  button { font:inherit; border:1px solid var(--line); background:transparent; color:var(--ink);
+           border-radius:6px; padding:5px 10px; cursor:pointer; }
+  button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .msg { padding:20px 16px; }
+  .err { color:var(--bad); }
+</style>
+</head>
+<body>
+  <div id="app"><div class="msg">Cargando…</div></div>
+  <script src="popup.js"></script>
+</body>
+</html>
